@@ -60,10 +60,10 @@ public class FirewallTest {
             Firewall fw = new Firewall("fw.csv");
             // Corner cases:
             boolean res1 = fw.acceptPacket("outbound", "udp", 2000, "52.12.48.92");
-            boolean res2 = fw.acceptPacket("outbound", "udp", 1000, "52.12.48.92");
+            boolean res2 = fw.acceptPacket("outbound", "udp", 1000, "52.12.66.99");
 
             // General case
-            boolean res3 = fw.acceptPacket("outbound", "udp", 1234, "52.12.48.92");
+            boolean res3 = fw.acceptPacket("outbound", "udp", 1234, "52.12.48.90");
             assertEquals(res1, true);
             assertEquals(res2, true);
             assertEquals(res3, true);
